@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobile Manager</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script defer src="./main.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Automobile Manager</h1>
+        <div class="card mt-3">
+            <div class="card-header">Create Automobile</div>
+            <div class="card-body">
+                <form id="createForm">
+                    <div class="form-group">
+                        <label for="manufacturer">Manufacturer</label>
+                        <input type="text" class="form-control" id="manufacturer" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Model</label>
+                        <input type="text" class="form-control" id="model" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="releaseYear">Release Year</label>
+                        <input type="number" class="form-control" id="releaseYear" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-header">Automobile List</div>
+            <div class="card-body">
+                <table class="table table-bordered" id="automobileTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Manufacturer</th>
+                            <th>Model</th>
+                            <th>Release Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Automobile data will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
