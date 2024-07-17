@@ -22,7 +22,7 @@ function createAutomobile(event) {
     })
         .then(response => {
             if (response.ok) {
-                showAlert("created");
+                showAlert("Automobile created successfully");
                 form.reset();
                 getAutomobiles();
             }
@@ -87,7 +87,7 @@ function deleteAutomobile(automobileId) {
     })
         .then(response => {
             if (response.ok) {
-                showAlert("deleted");
+                showAlert("Automobile deleted successfully");
                 getAutomobiles();
             }
         })
@@ -129,7 +129,7 @@ function updateAutomobile(event) {
     })
         .then(response => {
             if (response.ok) {
-                showAlert("updated");
+                showAlert("Automobile updated successfully");
                 form.reset();
                 getAutomobiles();
                 toggleForm(false);
@@ -156,10 +156,10 @@ function toggleForm(state) {
 function showAlert(status) {
     alertsContainer.innerHTML = `
         <div class="alert alert-success">
-            <strong>Success!</strong> Automobile successfully ${status}.
+            <strong>Success!</strong> ${status}.
         </div>
     `;
     setTimeout(() => {
-        alertsContainer.innerHTML = ''; // Clear the alert message
+        alertsContainer.innerHTML = '';
     }, 3000);
 }
