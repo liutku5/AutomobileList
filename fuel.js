@@ -12,7 +12,7 @@ function createFuelType(event) {
     const form = event.target;
     const formData = {};
     for (let field of form.elements) {
-        if (field.name) {
+        if (field.name && field.name !== 'id') { // Exclude the ID field
             formData[field.name] = field.value;
         }
     }
@@ -21,7 +21,7 @@ function createFuelType(event) {
         body: JSON.stringify(formData)
     })
         .then(response => {
-             if (data.id) {
+             if (response.ok) {
                 showAlert(`created fuel type`);
                 form.reset();
                 getFuelTypes();
