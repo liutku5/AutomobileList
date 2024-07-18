@@ -12,7 +12,7 @@ function createAutomobile(event) {
     const form = event.target;
     const formData = {};
     for (let field of form.elements) {
-        if (field.name) {
+        if (field.name && field.name !== 'id') { // Exclude the ID field
             formData[field.name] = field.value;
         }
     }
