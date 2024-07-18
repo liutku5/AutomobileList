@@ -12,7 +12,7 @@ function createFuelType(event) {
     const form = event.target;
     const formData = {};
     for (let field of form.elements) {
-        if (field.name && field.name !== 'id') { // Exclude the ID field
+        if (field.name && field.name !== 'id') { 
             formData[field.name] = field.value;
         }
     }
